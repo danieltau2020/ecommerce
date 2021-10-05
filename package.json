@@ -1,0 +1,28 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce website",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix fontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Daniel Tau",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.9",
+    "stripe": "^8.178.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.13"
+  }
+}
