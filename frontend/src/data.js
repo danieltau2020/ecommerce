@@ -26,17 +26,20 @@ export const categories = [
   {
     id: 1,
     img: 'https://i.ibb.co/dk4cPyD/pexels-liza-summer-6347546.jpg',
-    title: 'SHIRT STYLE!'
+    title: 'WOMEN',
+    cat: 'women'
   },
   {
     id: 2,
-    img: 'https://i.ibb.co/WHqCqR4/pexels-3814517.jpg',
-    title: 'LOUNGEWEAR LOVE'
+    img: 'https://i.ibb.co/Xk3SQn0/S21-L40024248147-NAVY-BLUE-jpg-2000-Wx3000-H.jpg',
+    title: 'MEN',
+    cat: 'men'
   },
   {
     id: 3,
     img: 'https://i.ibb.co/HXnRZRM/A20-CAMJKBTGR-GREY-jpg-2000-Wx3000-H.jpg',
-    title: 'LIGHT JACKETS'
+    title: 'FASHION SHIRTS',
+    cat: 'shirt'
   }
 ]
 

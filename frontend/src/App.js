@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
 import GlobalStyle from './globalStyle'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
@@ -9,17 +14,23 @@ import Login from './pages/Login'
 import Cart from './pages/Cart'
 
 const App = () => {
+  const user = true
+
   return (
     <Router>
       <GlobalStyle />
       <ScrollToTop />
       <Switch>
         <Route path='/' exact component={Home} />
-        <Route path='/productlist' exact component={ProductList} />
-        <Route path='/product' exact component={Product} />
+        <Route path='/products/:category' exact component={ProductList} />
+        <Route path='/product/:id' exact component={Product} />
         <Route path='/cart' exact component={Cart} />
-        <Route path='/register' exact component={Register} />
-        <Route path='/login' exact component={Login} />
+        <Route path='/login' exact>
+          {user ? <Redirect to='/' /> : <Login />}
+        </Route>
+        <Route path='/register' exact>
+          {user ? <Redirect to='/' /> : <Register />}
+        </Route>
       </Switch>
     </Router>
   )

@@ -1,13 +1,13 @@
 {
-  "name": "ecommerce",
+  "name": "eshop",
   "version": "1.0.0",
-  "description": "Ecommerce website",
+  "description": "Online shop",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
-    "client": "npm start --prefix fontend",
+    "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Daniel Tau",
